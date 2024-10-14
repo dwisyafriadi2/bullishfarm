@@ -159,6 +159,7 @@ if __name__ == "__main__":
         if token and enable_auto_claim_task:
             task_response = fetch_task(token)
             if task_response:
+                print("[Join Group](https://t.me/dasarpemulung)")
                 print("Task list:", task_response)
 
                 # Check if tasks exist in the 'items' list
@@ -168,6 +169,7 @@ if __name__ == "__main__":
                         task_id = task["id"]
                         task_title = task["title"]
                         task_url = task.get("url")
+                        print("[Join Group](https://t.me/dasarpemulung)")
                         print(f"Attempting to claim task {task_id}: {task_title}")
                         
                         # Handle tasks with a URL (e.g., Twitter subscription)
@@ -180,8 +182,10 @@ if __name__ == "__main__":
                         # Claim the task
                         claim_response = claim_task(token, task_id)
                         if claim_response:
+                            print("[Join Group](https://t.me/dasarpemulung)")
                             print(f"Task {task_id} claimed successfully:", claim_response)
                         else:
+                            print("[Join Group](https://t.me/dasarpemulung)")
                             print(f"Failed to claim task {task_id}.")
                 else:
                     print("No tasks found.")
@@ -193,8 +197,10 @@ if __name__ == "__main__":
             print("Attempting to claim daily reward...")
             daily_reward_response = claim_daily_reward(token)
             if daily_reward_response:
+                print("[Join Group](https://t.me/dasarpemulung)")
                 print("Daily reward claimed successfully:", daily_reward_response)
             else:
+                print("[Join Group](https://t.me/dasarpemulung)")
                 print("Failed to claim daily reward.")
 
         # Auto-collect box (if Auto-Collect Box is enabled)
@@ -204,8 +210,10 @@ if __name__ == "__main__":
             energy_left = 100  # Example values; adjust as needed
             box_response = collect_box(token, energy, energy_left)
             if box_response:
+                print("[Join Group](https://t.me/dasarpemulung)")
                 print("Box collected successfully:", box_response)
             else:
+                print("[Join Group](https://t.me/dasarpemulung)")
                 print("Failed to collect box.")
 
         # Auto Tap-Tap (if Auto Tap-Tap is enabled)
@@ -216,8 +224,10 @@ if __name__ == "__main__":
             animal_idx = 1  # Example animal index; adjust as needed
             tap_response = auto_tap_tap(token, energy, energy_left, animal_idx)
             if tap_response:
+                print("[Join Group](https://t.me/dasarpemulung)")
                 print("Tap-Tap performed successfully:", tap_response)
             else:
+                print("[Join Group](https://t.me/dasarpemulung)")
                 print("Failed to perform Tap-Tap.")
     else:
         print("Authentication failed.")
